@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    :root{
+        --boxcolor:#faf5ff;
+        --basecolor:#e9d5ff;
+        --buttoncolor:#9333ea;
+        --textcolor1:#000000;
+        --textcolor2:#9ca3af;
+    }
+}
+@layer components{
+    .boxcolor{
+        background-color: var(--boxcolor);
+    }
+    .basecolor{
+        background-color: var(--basecolor);
+    }
+    .textcolor1{
+        color:var(--textcolor1);
+    }
+    .btn{
+        background-color: var(--buttoncolor);
+        @apply  text-white shadow-inner text-lg font-mono font-extrabold rounded-3xl w-32 h-12
+         hover:border-2 hover:border-slate-300
+    }
+    .menu-items{
+        color:var(--textcolor1);
+        border-top:4;
+        border-color:var(--buttoncolor);
+        @apply flex flex-row h-16 gap-6 px-8 xl-2:px-14 items-center text-xl font-medium
+    }
+    .menu-items h{
+        @apply hidden xl-2:block
+    }
+    .menu-items:hover{
+        background-color: var(--basecolor);
+        color:var(--buttoncolor);
+        
+    }
+    .menu-items:focus{
+        background-color: var(--basecolor); 
+        color:var(--buttoncolor);
+        border-color:var(--buttoncolor); 
+        @apply border-l-8
+    }
+    .Notifications-count{
+        @apply absolute bg-red-400 text-white px-1 rounded-full -top-3 -right-3
+    }
+    .story-div{
+        @apply relative h-56 w-full md:w-28 bg-center bg-cover rounded-3xl py-4 px-3 flex flex-col justify-between 
+    }
+    .shadow{
+        @apply absolute bottom-0 left-0 w-full h-28 rounded-3xl bg-gradient-to-t from-black/75 to-transparent
+    }
+    .highlight{
+        @apply shadow-xl shadow-purple-800 
+    }
+}

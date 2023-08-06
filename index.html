@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>nokoSocial</title>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <!-------- nav bar -------->
+        <nav class="boxcolor flex flex-row py-5  justify-evenly w-screen h-max fixed z-30">
+            <div  class="textcolor1 text-3xl font-serif font-bold tracking-wider">nokoSocial</div>
+            <input type="search" placeholder="Search for creators, inspiration and products" class="basecolor textcolor1 text-lg font-thin pl-5 rounded-full w-2/5">
+            <div class="flex flex-row gap-7">
+                <button class="btn">Create</button>
+                <img src="images\profile-1.jpg" alt="profile photo" class="w-12 rounded-full">
+            </div>
+        </nav>
+
+            <!----------------------------------------main bar ----------------------------------------------->
+        <div class="flex flex-row relative basecolor w-screen pt-28 pb-4 justify-center">  
+            <!----------------------left part -------------------------------->
+            <div class=" flex flex-col w-20 xl-2:w-76 mx-4 gap-5 sticky top-60 xl-2:top-28 h-max">
+
+                <!----------------------left top -------------------------------->
+
+                <div class="hidden xl-2:flex flex-row boxcolor w-full p-4 rounded-2xl">
+                    <div class=" p-1 mr-5">
+                        <img src="images\profile-1.jpg" alt="" class="w-12 rounded-full">
+                    </div> 
+          
+                     <div class=" flex flex-col">
+                        <h class="textcolor1 font-medium text-2xl ">Diana Ayi</h>
+                        <h class="text-slate-400/100 text-lg">@dayi</h>
+                    </div>
+                </div> 
+
+             <!--------------------------left sidebar ----------------------------------------------->
+
+                <div  class=" w-max boxcolor xl-2:w-full rounded-2xl ">
+                    <a href="#" class="menu-items"><span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-7" id="home"><path fill="var(--textcolor2)" d="M21.66,10.25l-9-8a1,1,0,0,0-1.32,0l-9,8a1,1,0,0,0-.27,1.11A1,1,0,0,0,3,12H4v9a1,1,0,0,0,1,1H19a1,1,0,0,0,1-1V12h1a1,1,0,0,0,.93-.64A1,1,0,0,0,21.66,10.25ZM13,20H11V17a1,1,0,0,1,2,0Zm5,0H15V17a3,3,0,0,0-6,0v3H6V12H18ZM5.63,10,12,4.34,18.37,10Z"></path></svg></span>
+                        <h>Home</h>
+                    </a>
+                    <a href="#" class="menu-items"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-7" id="compass"><path fill="var(--textcolor2)" d="M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm1,17.93V19a1,1,0,0,0-2,0v.93A8,8,0,0,1,4.07,13H5a1,1,0,0,0,0-2H4.07A8,8,0,0,1,11,4.07V5a1,1,0,0,0,2,0V4.07A8,8,0,0,1,19.93,11H19a1,1,0,0,0,0,2h.93A8,8,0,0,1,13,19.93ZM15.14,7.55l-5,2.12a1,1,0,0,0-.52.52l-2.12,5a1,1,0,0,0,.21,1.1,1,1,0,0,0,.7.3.93.93,0,0,0,.4-.09l5-2.12a1,1,0,0,0,.52-.52l2.12-5a1,1,0,0,0-1.31-1.31Zm-2.49,5.1-2.28,1,1-2.28,2.28-1Z"></path></svg>
+                        <h>Explore</h>
+                    </a>
+                    <a href="#" class=" relative menu-items" id="Notifications">
+                        <div class="relative">
+                            <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1"  class="h-7" viewBox="0 0 24 24" id="bell"><path fill="var(--textcolor2)" d="M18,13.18V10a6,6,0,0,0-5-5.91V3a1,1,0,0,0-2,0V4.09A6,6,0,0,0,6,10v3.18A3,3,0,0,0,4,16v2a1,1,0,0,0,1,1H8.14a4,4,0,0,0,7.72,0H19a1,1,0,0,0,1-1V16A3,3,0,0,0,18,13.18ZM8,10a4,4,0,0,1,8,0v3H8Zm4,10a2,2,0,0,1-1.72-1h3.44A2,2,0,0,1,12,20Zm6-3H6V16a1,1,0,0,1,1-1H17a1,1,0,0,1,1,1Z"></path></svg>
+                            <small class="Notifications-count">8+</small>
+                        </div>
+                        <h>Notifications</h>
+                        
+                        <!----------------------------------------notification popup ----------------------------------------------->
+                        <div id="Notifications-popup" class="collapse absolute flex flex-col left-28 xl-2:left-80 top-0 w-144 gap-3 p-4 bg-purple-50 rounded-2xl border border-slate-300">
+                            <div class="relative flex flex-row justify-between gap-3">
+                                <div class="absolute w-6 h-6 -left-7
+                                 -rotate-45 bg-purple-50 border-t border-s border-slate-300 "></div>
+                                <div class="p-1 z-0">
+                                    <img src="images\profile-4.jpg" alt="" class=" w-12 rounded-full">
+                                </div>
+                                <div class="w-11/12 font-normal flex flex-col">
+                                    <h1 class="text-black"><b>Keke Benjamin</b> accepted your friend request</h1>
+                                    <small class="text-slate-400">4 MINUTES AGO</small>
+                                </div>
+                            </div>
+                            <div class="flex flex-row justify-between gap-3">
+                                <div class="p-1">
+                                    <img src="images\profile-2.jpg" alt="" class="w-12 rounded-full">
+                                </div>
+                                <div class="w-11/12 font-normal flex flex-col">
+                                    <h1 class="text-black"><b>Ayivor Mensah</b> commented on your post</h1>
+                                    <small class="text-slate-400">1 HOUR AGO</small>
+                                </div>
+                            </div>
+                            <div class="flex flex-row justify-between gap-3">
+                                <div class="p-1">
+                                    <img src="images\profile-3.jpg" alt="" class="w-12 rounded-full">
+                                </div>
+                                <div class="w-11/12 font-normal flex flex-col">
+                                    <h1 class="text-black"><b>Mary Oppong</b> and <b>238 others</b> liked your post</h1>
+                                    <small class="text-slate-400">1 HOUR AGO</small>
+                                </div>
+                            </div>
+                            <div class="flex flex-row justify-between gap-3">
+                                <div class="p-1">
+                                    <img src="images\profile-5.jpg" alt="" class="w-12 rounded-full">
+                                </div>
+                                <div class="w-11/12 font-normal flex flex-col">
+                                    <h1 class="text-black"><b>Denilia Jackson</b> commented on a post you are tagged in</h1>
+                                    <small class="text-slate-400">3 HOURS AGO</small>
+                                </div>
+                            </div>
+                            <div class="flex flex-row justify-between gap-3">
+                                <div class="p-1">
+                                    <img src="images\profile-12.jpg" alt="" class="w-12 rounded-full">
+                                </div>
+                                <div class="w-11/12 font-normal flex flex-col">
+                                    <h1 class="text-black"><b>Jane Doe</b> commented on your post</h1>
+                                    <small class="text-slate-400">2 DAYS AGO</small>
+                                </div>
+                            </div>
+                            <div class="flex flex-row justify-between gap-3">
+                                <div class="p-1">
+                                    <img src="images\profile-7.jpg" alt="" class="w-12 rounded-full">
+                                </div>
+                                <div class="w-11/12 font-normal flex flex-col">
+                                    <h1 class="text-black"><b>Nick Kroll</b> commented on your post</h1>
+                                    <small class="text-slate-400">2 DAYS AGO</small>
+                                </div>
+                            </div>
+                
+                        </div>
+                    </a>
+
+                    <a href="#" id="Message-Notifications" class="menu-items relative">
+                        <div class="relative">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  class="h-7" id="envelope"><path fill="var(--textcolor2)" d="M19,4H5A3,3,0,0,0,2,7V17a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V7A3,3,0,0,0,19,4Zm-.41,2-5.88,5.88a1,1,0,0,1-1.42,0L5.41,6ZM20,17a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V7.41l5.88,5.88a3,3,0,0,0,4.24,0L20,7.41Z"></path></svg>
+                            <small class="Notifications-count">6+</small>
+                        </div>
+                        <h>Messages</h>
+                    </a>
+                    <a href="#" class="menu-items"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-7" id="bookmark"><path fill="var(--textcolor2)" d="M16,2H8A3,3,0,0,0,5,5V21a1,1,0,0,0,.5.87,1,1,0,0,0,1,0L12,18.69l5.5,3.18A1,1,0,0,0,18,22a1,1,0,0,0,.5-.13A1,1,0,0,0,19,21V5A3,3,0,0,0,16,2Zm1,17.27-4.5-2.6a1,1,0,0,0-1,0L7,19.27V5A1,1,0,0,1,8,4h8a1,1,0,0,1,1,1Z"></path></svg>
+                        <h>Bookmarks</h>
+                    </a>
+                    <a href="#" class="menu-items"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  class="h-7"id="chart-line"><path fill="var(--textcolor2)" d="M7,16a1.5,1.5,0,0,0,1.5-1.5.77.77,0,0,0,0-.15l2.79-2.79.23,0,.23,0,1.61,1.61s0,.05,0,.08a1.5,1.5,0,1,0,3,0v-.08L20,9.5h0A1.5,1.5,0,1,0,18.5,8a.77.77,0,0,0,0,.15l-3.61,3.61h-.16L13,10a1.49,1.49,0,0,0-3,0L7,13H7a1.5,1.5,0,0,0,0,3Zm13.5,4H3.5V3a1,1,0,0,0-2,0V21a1,1,0,0,0,1,1h18a1,1,0,0,0,0-2Z"></path></svg>
+                        <h>Analytics</h>
+                    </a>
+                    <a href="#" id="Theme-bar" class="menu-items relative"><svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" class="h-7" viewBox="0 0 24 24" id="palette"><path fill="var(--textcolor2)" d="M7.42,15.54a1,1,0,0,0,0,1.41,1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.41A1,1,0,0,0,7.42,15.54Zm0-8.49a1,1,0,0,0,0,1.41,1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.41A1,1,0,0,0,7.42,7.05Zm4.95,10a1,1,0,1,0,1,1A1,1,0,0,0,12.37,17Zm-6-6a1,1,0,1,0,1,1A1,1,0,0,0,6.37,11Zm6-6a1,1,0,1,0,1,1A1,1,0,0,0,12.37,5Zm3.54,2.05a1,1,0,1,0,1.41,0A1,1,0,0,0,15.91,7.05Zm6.3,0a11,11,0,1,0-7.85,15.74,3.87,3.87,0,0,0,2.5-1.65A4.2,4.2,0,0,0,17.47,18a5.65,5.65,0,0,1-.1-1,5,5,0,0,1,3-4.56,3.84,3.84,0,0,0,2.06-2.25A4,4,0,0,0,22.21,7.08Zm-1.7,2.44a1.9,1.9,0,0,1-1,1.09A7,7,0,0,0,15.37,17a7.3,7.3,0,0,0,.14,1.4,2.16,2.16,0,0,1-.31,1.65,1.79,1.79,0,0,1-1.21.8,8.72,8.72,0,0,1-1.62.15,9,9,0,0,1-9-9.28A9.05,9.05,0,0,1,11.85,3h.51a9,9,0,0,1,8.06,5A2,2,0,0,1,20.51,9.52ZM12.37,11a1,1,0,1,0,1,1A1,1,0,0,0,12.37,11Z"></path></svg>
+                        <h>Theme</h>
+                    </a>
+                    <a href="#" class="menu-items"><svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1"  class="h-7" viewBox="0 0 24 24" id="setting"><path fill="var(--textcolor2)" d="M19.9 12.66a1 1 0 0 1 0-1.32l1.28-1.44a1 1 0 0 0 .12-1.17l-2-3.46a1 1 0 0 0-1.07-.48l-1.88.38a1 1 0 0 1-1.15-.66l-.61-1.83a1 1 0 0 0-.95-.68h-4a1 1 0 0 0-1 .68l-.56 1.83a1 1 0 0 1-1.15.66L5 4.79a1 1 0 0 0-1 .48L2 8.73a1 1 0 0 0 .1 1.17l1.27 1.44a1 1 0 0 1 0 1.32L2.1 14.1a1 1 0 0 0-.1 1.17l2 3.46a1 1 0 0 0 1.07.48l1.88-.38a1 1 0 0 1 1.15.66l.61 1.83a1 1 0 0 0 1 .68h4a1 1 0 0 0 .95-.68l.61-1.83a1 1 0 0 1 1.15-.66l1.88.38a1 1 0 0 0 1.07-.48l2-3.46a1 1 0 0 0-.12-1.17ZM18.41 14l.8.9-1.28 2.22-1.18-.24a3 3 0 0 0-3.45 2L12.92 20h-2.56L10 18.86a3 3 0 0 0-3.45-2l-1.18.24-1.3-2.21.8-.9a3 3 0 0 0 0-4l-.8-.9 1.28-2.2 1.18.24a3 3 0 0 0 3.45-2L10.36 4h2.56l.38 1.14a3 3 0 0 0 3.45 2l1.18-.24 1.28 2.22-.8.9a3 3 0 0 0 0 3.98Zm-6.77-6a4 4 0 1 0 4 4 4 4 0 0 0-4-4Zm0 6a2 2 0 1 1 2-2 2 2 0 0 1-2 2Z"></path></svg>
+                        <h>Settings</h>
+                    </a>
+                </div>
+
+                <button class="hidden xl-2:block btn w-full">Create Post</button>
+            </div>
+
+            <!------------------------------------------------center part-------------------------------------------------------------------->
+        
+            <div class=" flex flex-col mx-8 w-96 md:w-168 gap-4">
+                <!--------------------------------------------story section--------------------------------->
+                <div class="flex flex-row gap-3 w-full overflow-hidden">
+                    <div class="story-div" style="background-image: url('images/story-1.jpg');">
+                        <img src="images\profile-20.jpg" alt="" class="w-10 rounded-full border-4" style="border-color:var(--buttoncolor)">
+                        <div class="text-white text-lg w-10 z-10">Your Story</div>
+                        <div class="shadow"></div>
+                    </div>
+                    <div class="story-div" style="background-image: url('images/story-2.jpg');">
+                        <img src="images\profile-9.jpg" alt="" class="w-10 rounded-full border-4" style="border-color:var(--buttoncolor)">
+                        <div class="text-white text-lg w-10 z-10">Lila James</div>
+                        <div class="shadow"></div>
+                    </div>
+                    <div class="story-div" style="background-image: url('images/story-3.jpg');">
+                        <img src="images\profile-10.jpg" alt="" class="w-10 rounded-full border-4" style="border-color:var(--buttoncolor)">
+                        <div class="text-white text-lg w-10 z-10">Winnie Hael</div>
+                        <div class="shadow"></div>
+                    </div>
+                    <div class="story-div" style="background-image: url('images/story-4.jpg');">
+                        <img src="images\profile-11.jpg" alt=""  class="w-10 rounded-full border-4" style="border-color:var(--buttoncolor)">
+                        <div class="text-white text-lg w-10 z-10">Daniel Bale</div>
+                        <div class="shadow"></div>
+                    </div>
+                    <div class="story-div" style="background-image: url('images/story-5.jpg');">
+                        <img src="images\profile-12.jpg" alt="" class="w-10 rounded-full border-4 "style="border-color:var(--buttoncolor)">
+                        <div class="text-white text-lg w-10 z-10">Jane Doe</div>
+                        <div class="shadow"></div>
+                    </div>
+                    <div class="story-div" style="background-image: url('images/story-6.jpg');">
+                        <img src="images\profile-8.jpg" alt="" class="w-10 rounded-full border-4" style="border-color:var(--buttoncolor)">
+                        <div class="text-white text-lg w-10 z-10">Tina White</div>
+                        <div class="shadow"></div>
+                    </div>
+                </div>
+
+                <!------------------------------------------------Create post----------------------------------------------->
+                <div class="flex flex-row justify-between rounded-full w-full h-16  py-2 px-4 boxcolor">
+                    <div>
+                        <img src="images\profile-1.jpg" alt="profile pic" class="w-12 rounded-full">
+                    </div>
+                    <input type="text" placeholder="What's in your mind, Diana?" class="text-lg textcolor1 font-thin w-2/3 boxcolor">
+                    <button class="btn">Post</button>
+                </div>
+                <!-----------------------------------------------Feeds Section----------------------------------------------->
+                <div class="flex flex-col py-4 px-4 gap-3 boxcolor rounded-3xl">
+                    <div class="flex flex-row justify-between">
+                        <div class="flex flex-row gap-4">
+                            <img src="images/profile-6.jpg" alt="" class="w-12 rounded-full">
+                            <div class="flex flex-col">
+                                <b class="textcolor1 font-medium text-xl">Julliet Makarey</b>
+                                <h class="text-slate-400">Dubai, 15 MINUTES AGO</h>
+                            </div>
+                        </div> 
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6" id="ellipsis-h"><path fill="var(--textcolor1)" d="M12,10a2,2,0,1,0,2,2A2,2,0,0,0,12,10ZM5,10a2,2,0,1,0,2,2A2,2,0,0,0,5,10Zm14,0a2,2,0,1,0,2,2A2,2,0,0,0,19,10Z"></path></svg>
+                    </div>
+                    <div>
+                        <img src="images/feed-1.jpg" alt="" class="w-full rounded-3xl">
+                    </div>
+                    <div class="flex mx-3 flex-row justify-between ">
+                        <div class="flex flex-row gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6" id="heart"><path fill="var(--textcolor1)" d="M20.16,5A6.29,6.29,0,0,0,12,4.36a6.27,6.27,0,0,0-8.16,9.48l6.21,6.22a2.78,2.78,0,0,0,3.9,0l6.21-6.22A6.27,6.27,0,0,0,20.16,5Zm-1.41,7.46-6.21,6.21a.76.76,0,0,1-1.08,0L5.25,12.43a4.29,4.29,0,0,1,0-6,4.27,4.27,0,0,1,6,0,1,1,0,0,0,1.42,0,4.27,4.27,0,0,1,6,0A4.29,4.29,0,0,1,18.75,12.43Z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6" id="comment-dots"><path fill="var(--textcolor1)" d="M8,11a1,1,0,1,0,1,1A1,1,0,0,0,8,11Zm4,0a1,1,0,1,0,1,1A1,1,0,0,0,12,11Zm4,0a1,1,0,1,0,1,1A1,1,0,0,0,16,11ZM12,2A10,10,0,0,0,2,12a9.89,9.89,0,0,0,2.26,6.33l-2,2a1,1,0,0,0-.21,1.09A1,1,0,0,0,3,22h9A10,10,0,0,0,12,2Zm0,18H5.41l.93-.93a1,1,0,0,0,.3-.71,1,1,0,0,0-.3-.7A8,8,0,1,1,12,20Z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6" id="share-alt"><path fill="var(--textcolor1)" d="M18,14a4,4,0,0,0-3.08,1.48l-5.1-2.35a3.64,3.64,0,0,0,0-2.26l5.1-2.35A4,4,0,1,0,14,6a4.17,4.17,0,0,0,.07.71L8.79,9.14a4,4,0,1,0,0,5.72l5.28,2.43A4.17,4.17,0,0,0,14,18a4,4,0,1,0,4-4ZM18,4a2,2,0,1,1-2,2A2,2,0,0,1,18,4ZM6,14a2,2,0,1,1,2-2A2,2,0,0,1,6,14Zm12,6a2,2,0,1,1,2-2A2,2,0,0,1,18,20Z"></path></svg>
+                        </div>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6" id="bookmark"><path fill="var(--textcolor1)" d="M16,2H8A3,3,0,0,0,5,5V21a1,1,0,0,0,.5.87,1,1,0,0,0,1,0L12,18.69l5.5,3.18A1,1,0,0,0,18,22a1,1,0,0,0,.5-.13A1,1,0,0,0,19,21V5A3,3,0,0,0,16,2Zm1,17.27-4.5-2.6a1,1,0,0,0-1,0L7,19.27V5A1,1,0,0,1,8,4h8a1,1,0,0,1,1,1Z"></path></svg>
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <div class=" flex flex-row">
+                            <img src="images/profile-6.jpg" alt="" class="  rounded-full w-6 border-2 border-white" >
+                            <img src="images/profile-8.jpg" alt="" class=" rounded-full  w-6 -ml-2 border-2 border-white" >
+                            <img src="images/profile-4.jpg" alt="" class="  rounded-full w-6 -ml-3 border-2 border-white" >
+                            <h1 class="textcolor1">Liked by <b>Ernest Achiver</b> and <b>2,323 others</b></h1>
+                        </div>
+                        <h class="textcolor1"><b>Julliet Makarey</b> Merry Christmas.... #celebration</h>
+                        <h class="text-slate-400">View all 277 comments</h>
+                    </div>
+                    
+                        
+                </div>
+                <div class="flex flex-col py-4 px-4 gap-3 boxcolor rounded-3xl">
+                    <div class="flex flex-row justify-between">
+                        <div class="flex flex-row gap-4">
+                            <img src="images/profile-8.jpg" alt="" class="w-12 rounded-full">
+                            <div class="flex flex-col">
+                                <b class="textcolor1 font-medium text-xl">Benjamin Dwayne</b>
+                                <h class="text-slate-400">Miami, 2 HOURS AGO</h>
+                            </div>
+                        </div> 
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6" id="ellipsis-h"><path fill="var(--textcolor1)" d="M12,10a2,2,0,1,0,2,2A2,2,0,0,0,12,10ZM5,10a2,2,0,1,0,2,2A2,2,0,0,0,5,10Zm14,0a2,2,0,1,0,2,2A2,2,0,0,0,19,10Z"></path></svg>
+                    </div>
+                    <div>
+                        <img src="images/feed-2.jpg" alt="" class="w-full rounded-3xl">
+                    </div>
+                    <div class="flex mx-3 flex-row justify-between ">
+                        <div class="flex flex-row gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6" id="heart"><path fill="var(--textcolor1)" d="M20.16,5A6.29,6.29,0,0,0,12,4.36a6.27,6.27,0,0,0-8.16,9.48l6.21,6.22a2.78,2.78,0,0,0,3.9,0l6.21-6.22A6.27,6.27,0,0,0,20.16,5Zm-1.41,7.46-6.21,6.21a.76.76,0,0,1-1.08,0L5.25,12.43a4.29,4.29,0,0,1,0-6,4.27,4.27,0,0,1,6,0,1,1,0,0,0,1.42,0,4.27,4.27,0,0,1,6,0A4.29,4.29,0,0,1,18.75,12.43Z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6" id="comment-dots"><path fill="var(--textcolor1)" d="M8,11a1,1,0,1,0,1,1A1,1,0,0,0,8,11Zm4,0a1,1,0,1,0,1,1A1,1,0,0,0,12,11Zm4,0a1,1,0,1,0,1,1A1,1,0,0,0,16,11ZM12,2A10,10,0,0,0,2,12a9.89,9.89,0,0,0,2.26,6.33l-2,2a1,1,0,0,0-.21,1.09A1,1,0,0,0,3,22h9A10,10,0,0,0,12,2Zm0,18H5.41l.93-.93a1,1,0,0,0,.3-.71,1,1,0,0,0-.3-.7A8,8,0,1,1,12,20Z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6" id="share-alt"><path fill="var(--textcolor1)" d="M18,14a4,4,0,0,0-3.08,1.48l-5.1-2.35a3.64,3.64,0,0,0,0-2.26l5.1-2.35A4,4,0,1,0,14,6a4.17,4.17,0,0,0,.07.71L8.79,9.14a4,4,0,1,0,0,5.72l5.28,2.43A4.17,4.17,0,0,0,14,18a4,4,0,1,0,4-4ZM18,4a2,2,0,1,1-2,2A2,2,0,0,1,18,4ZM6,14a2,2,0,1,1,2-2A2,2,0,0,1,6,14Zm12,6a2,2,0,1,1,2-2A2,2,0,0,1,18,20Z"></path></svg>
+                        </div>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6" id="bookmark"><path fill="var(--textcolor1)" d="M16,2H8A3,3,0,0,0,5,5V21a1,1,0,0,0,.5.87,1,1,0,0,0,1,0L12,18.69l5.5,3.18A1,1,0,0,0,18,22a1,1,0,0,0,.5-.13A1,1,0,0,0,19,21V5A3,3,0,0,0,16,2Zm1,17.27-4.5-2.6a1,1,0,0,0-1,0L7,19.27V5A1,1,0,0,1,8,4h8a1,1,0,0,1,1,1Z"></path></svg>
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <div class=" flex flex-row">
+                            <img src="images/profile-7.jpg" alt="" class="rounded-full w-6 border-2 border-white" >
+                            <img src="images/profile-10.jpg" alt="" class="rounded-full  w-6 -ml-2 border-2 border-white" >
+                            <img src="images/profile-14.jpg" alt="" class="rounded-full w-6 -ml-3 border-2 border-white" >
+                            <h1 class="textcolor1">Liked by<b> Logan Paul</b> and<b> 5,850 others</b></h1>
+                        </div>
+                        <h class="textcolor1"><b>Benjamin Dwayne</b> This look suits me????</h>
+                        <h class="text-slate-400"> View all 351 comments</h>
+                    </div>
+                    
+                        
+                </div>
+                <div class="flex flex-col py-4 px-4 gap-3 boxcolor rounded-3xl">
+                    <div class="flex flex-row justify-between">
+                        <div class="flex flex-row gap-4">
+                            <img src="images/profile-17.jpg" alt="" class="w-12 rounded-full">
+                            <div class="flex flex-col">
+                                <b class="textcolor1 font-medium text-xl">Alexandra</b>
+                                <h class="text-slate-400">Sanfransico, 1 HOURS AGO</h>
+                            </div>
+                        </div> 
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6" id="ellipsis-h"><path fill="var(--textcolor1)" d="M12,10a2,2,0,1,0,2,2A2,2,0,0,0,12,10ZM5,10a2,2,0,1,0,2,2A2,2,0,0,0,5,10Zm14,0a2,2,0,1,0,2,2A2,2,0,0,0,19,10Z"></path></svg>
+                    </div>
+                    <div>
+                        <img src="images/feed-3.jpg" alt="" class="w-full rounded-3xl">
+                    </div>
+                    <div class="flex mx-3 flex-row justify-between ">
+                        <div class="flex flex-row gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6" id="heart"><path fill="var(--textcolor1)" d="M20.16,5A6.29,6.29,0,0,0,12,4.36a6.27,6.27,0,0,0-8.16,9.48l6.21,6.22a2.78,2.78,0,0,0,3.9,0l6.21-6.22A6.27,6.27,0,0,0,20.16,5Zm-1.41,7.46-6.21,6.21a.76.76,0,0,1-1.08,0L5.25,12.43a4.29,4.29,0,0,1,0-6,4.27,4.27,0,0,1,6,0,1,1,0,0,0,1.42,0,4.27,4.27,0,0,1,6,0A4.29,4.29,0,0,1,18.75,12.43Z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6" id="comment-dots"><path fill="var(--textcolor1)" d="M8,11a1,1,0,1,0,1,1A1,1,0,0,0,8,11Zm4,0a1,1,0,1,0,1,1A1,1,0,0,0,12,11Zm4,0a1,1,0,1,0,1,1A1,1,0,0,0,16,11ZM12,2A10,10,0,0,0,2,12a9.89,9.89,0,0,0,2.26,6.33l-2,2a1,1,0,0,0-.21,1.09A1,1,0,0,0,3,22h9A10,10,0,0,0,12,2Zm0,18H5.41l.93-.93a1,1,0,0,0,.3-.71,1,1,0,0,0-.3-.7A8,8,0,1,1,12,20Z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6" id="share-alt"><path fill="var(--textcolor1)" d="M18,14a4,4,0,0,0-3.08,1.48l-5.1-2.35a3.64,3.64,0,0,0,0-2.26l5.1-2.35A4,4,0,1,0,14,6a4.17,4.17,0,0,0,.07.71L8.79,9.14a4,4,0,1,0,0,5.72l5.28,2.43A4.17,4.17,0,0,0,14,18a4,4,0,1,0,4-4ZM18,4a2,2,0,1,1-2,2A2,2,0,0,1,18,4ZM6,14a2,2,0,1,1,2-2A2,2,0,0,1,6,14Zm12,6a2,2,0,1,1,2-2A2,2,0,0,1,18,20Z"></path></svg>
+                        </div>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6" id="bookmark"><path fill="var(--textcolor1)" d="M16,2H8A3,3,0,0,0,5,5V21a1,1,0,0,0,.5.87,1,1,0,0,0,1,0L12,18.69l5.5,3.18A1,1,0,0,0,18,22a1,1,0,0,0,.5-.13A1,1,0,0,0,19,21V5A3,3,0,0,0,16,2Zm1,17.27-4.5-2.6a1,1,0,0,0-1,0L7,19.27V5A1,1,0,0,1,8,4h8a1,1,0,0,1,1,1Z"></path></svg>
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <div class=" flex flex-row">
+                            <img src="images/profile-18.jpg" alt="" class="  rounded-full w-6 border-2 border-white" >
+                            <img src="images/profile-7.jpg" alt="" class=" rounded-full  w-6 -ml-2 border-2 border-white" >
+                            <img src="images/profile-5.jpg" alt="" class="  rounded-full w-6 -ml-3 border-2 border-white" >
+                            <h1 class="textcolor1">Liked by <b>Jane Doe</b> and <b>2,743 others</b></h1>
+                        </div>
+                        <h class="textcolor1"><b>Alexendra </b>These farms are so refreshing   #nature #photoshoot</h>
+                        <h class="text-slate-400">View all 421 comments</h>
+                    </div>    
+                </div>
+                <div class="flex flex-col py-4 px-4 gap-3 boxcolor rounded-3xl">
+                    <div class="flex flex-row justify-between">
+                        <div class="flex flex-row gap-4">
+                            <img src="images/profile-10.jpg" alt="" class="w-12 rounded-full">
+                            <div class="flex flex-col">
+                                <b class="textcolor1 font-medium text-xl">Kate Bishop</b>
+                                <h class="text-slate-400">Columbia, 3 HOURS AGO</h>
+                            </div>
+                        </div> 
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6" id="ellipsis-h"><path fill="var(--textcolor1)" d="M12,10a2,2,0,1,0,2,2A2,2,0,0,0,12,10ZM5,10a2,2,0,1,0,2,2A2,2,0,0,0,5,10Zm14,0a2,2,0,1,0,2,2A2,2,0,0,0,19,10Z"></path></svg>
+                    </div>
+                    <div>
+                        <img src="images/feed-4.jpg" alt="" class="w-full rounded-3xl">
+                    </div>
+                    <div class="flex mx-3 flex-row justify-between ">
+                        <div class="flex flex-row gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6" id="heart"><path fill="var(--textcolor1)" d="M20.16,5A6.29,6.29,0,0,0,12,4.36a6.27,6.27,0,0,0-8.16,9.48l6.21,6.22a2.78,2.78,0,0,0,3.9,0l6.21-6.22A6.27,6.27,0,0,0,20.16,5Zm-1.41,7.46-6.21,6.21a.76.76,0,0,1-1.08,0L5.25,12.43a4.29,4.29,0,0,1,0-6,4.27,4.27,0,0,1,6,0,1,1,0,0,0,1.42,0,4.27,4.27,0,0,1,6,0A4.29,4.29,0,0,1,18.75,12.43Z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6" id="comment-dots"><path fill="var(--textcolor1)" d="M8,11a1,1,0,1,0,1,1A1,1,0,0,0,8,11Zm4,0a1,1,0,1,0,1,1A1,1,0,0,0,12,11Zm4,0a1,1,0,1,0,1,1A1,1,0,0,0,16,11ZM12,2A10,10,0,0,0,2,12a9.89,9.89,0,0,0,2.26,6.33l-2,2a1,1,0,0,0-.21,1.09A1,1,0,0,0,3,22h9A10,10,0,0,0,12,2Zm0,18H5.41l.93-.93a1,1,0,0,0,.3-.71,1,1,0,0,0-.3-.7A8,8,0,1,1,12,20Z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6" id="share-alt"><path fill="var(--textcolor1)" d="M18,14a4,4,0,0,0-3.08,1.48l-5.1-2.35a3.64,3.64,0,0,0,0-2.26l5.1-2.35A4,4,0,1,0,14,6a4.17,4.17,0,0,0,.07.71L8.79,9.14a4,4,0,1,0,0,5.72l5.28,2.43A4.17,4.17,0,0,0,14,18a4,4,0,1,0,4-4ZM18,4a2,2,0,1,1-2,2A2,2,0,0,1,18,4ZM6,14a2,2,0,1,1,2-2A2,2,0,0,1,6,14Zm12,6a2,2,0,1,1,2-2A2,2,0,0,1,18,20Z"></path></svg>
+                        </div>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6" id="bookmark"><path fill="var(--textcolor1)" d="M16,2H8A3,3,0,0,0,5,5V21a1,1,0,0,0,.5.87,1,1,0,0,0,1,0L12,18.69l5.5,3.18A1,1,0,0,0,18,22a1,1,0,0,0,.5-.13A1,1,0,0,0,19,21V5A3,3,0,0,0,16,2Zm1,17.27-4.5-2.6a1,1,0,0,0-1,0L7,19.27V5A1,1,0,0,1,8,4h8a1,1,0,0,1,1,1Z"></path></svg>
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <div class=" flex flex-row">
+                            <img src="images/profile-9.jpg" alt="" class="  rounded-full w-6 border-2 border-white" >
+                            <img src="images/profile-7.jpg" alt="" class=" rounded-full  w-6 -ml-2 border-2 border-white" >
+                            <img src="images/profile-12.jpg" alt="" class="  rounded-full w-6 -ml-3 border-2 border-white" >
+                            <h1 class="textcolor1">Liked by <b>Emilly Khan</b> and <b>1,423 others</b></h1>
+                        </div>
+                        <h class="textcolor1"><b>Kate Bishop</b> Weirdossssss</h>
+                        <h class="text-slate-400">View all 244 comments</h>
+                    </div>        
+                </div>
+                <div class="flex flex-col py-4 px-4 gap-3 boxcolor rounded-3xl">
+                    <div class="flex flex-row justify-between">
+                        <div class="flex flex-row gap-4">
+                            <img src="images/profile-11.jpg" alt="" class="w-12 rounded-full">
+                            <div class="flex flex-col">
+                                <b class="textcolor1 font-medium text-xl">Robin K.</b>
+                                <h class="text-slate-400">New York, 4 HOURS AGO</h>
+                            </div>
+                        </div> 
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6" id="ellipsis-h"><path fill="var(--textcolor1)" d="M12,10a2,2,0,1,0,2,2A2,2,0,0,0,12,10ZM5,10a2,2,0,1,0,2,2A2,2,0,0,0,5,10Zm14,0a2,2,0,1,0,2,2A2,2,0,0,0,19,10Z"></path></svg>
+                    </div>
+                    <div>
+                        <img src="images/feed-5.jpg" alt="" class="w-full rounded-3xl">
+                    </div>
+                    <div class="flex mx-3 flex-row justify-between ">
+                        <div class="flex flex-row gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6" id="heart"><path fill="var(--textcolor1)" d="M20.16,5A6.29,6.29,0,0,0,12,4.36a6.27,6.27,0,0,0-8.16,9.48l6.21,6.22a2.78,2.78,0,0,0,3.9,0l6.21-6.22A6.27,6.27,0,0,0,20.16,5Zm-1.41,7.46-6.21,6.21a.76.76,0,0,1-1.08,0L5.25,12.43a4.29,4.29,0,0,1,0-6,4.27,4.27,0,0,1,6,0,1,1,0,0,0,1.42,0,4.27,4.27,0,0,1,6,0A4.29,4.29,0,0,1,18.75,12.43Z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6" id="comment-dots"><path fill="var(--textcolor1)" d="M8,11a1,1,0,1,0,1,1A1,1,0,0,0,8,11Zm4,0a1,1,0,1,0,1,1A1,1,0,0,0,12,11Zm4,0a1,1,0,1,0,1,1A1,1,0,0,0,16,11ZM12,2A10,10,0,0,0,2,12a9.89,9.89,0,0,0,2.26,6.33l-2,2a1,1,0,0,0-.21,1.09A1,1,0,0,0,3,22h9A10,10,0,0,0,12,2Zm0,18H5.41l.93-.93a1,1,0,0,0,.3-.71,1,1,0,0,0-.3-.7A8,8,0,1,1,12,20Z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6" id="share-alt"><path fill="var(--textcolor1)" d="M18,14a4,4,0,0,0-3.08,1.48l-5.1-2.35a3.64,3.64,0,0,0,0-2.26l5.1-2.35A4,4,0,1,0,14,6a4.17,4.17,0,0,0,.07.71L8.79,9.14a4,4,0,1,0,0,5.72l5.28,2.43A4.17,4.17,0,0,0,14,18a4,4,0,1,0,4-4ZM18,4a2,2,0,1,1-2,2A2,2,0,0,1,18,4ZM6,14a2,2,0,1,1,2-2A2,2,0,0,1,6,14Zm12,6a2,2,0,1,1,2-2A2,2,0,0,1,18,20Z"></path></svg>
+                        </div>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6" id="bookmark"><path fill="var(--textcolor1)" d="M16,2H8A3,3,0,0,0,5,5V21a1,1,0,0,0,.5.87,1,1,0,0,0,1,0L12,18.69l5.5,3.18A1,1,0,0,0,18,22a1,1,0,0,0,.5-.13A1,1,0,0,0,19,21V5A3,3,0,0,0,16,2Zm1,17.27-4.5-2.6a1,1,0,0,0-1,0L7,19.27V5A1,1,0,0,1,8,4h8a1,1,0,0,1,1,1Z"></path></svg>
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <div class=" flex flex-row">
+                            <img src="images/profile-20.jpg" alt="" class="  rounded-full w-6 border-2 border-white" >
+                            <img src="images/profile-15.jpg" alt="" class=" rounded-full  w-6 -ml-2 border-2 border-white" >
+                            <img src="images/profile-10.jpg" alt="" class="  rounded-full w-6 -ml-3 border-2 border-white" >
+                            <h1 class="textcolor1">Liked by <b>Kate Bishop</b> and <b>5,704 others</b></h1>
+                        </div>
+                        <h class="textcolor1"><b>Robin K.</b> Loving This City</h>
+                        <h class="text-slate-400">View all 800 comments</h>
+                    </div>
+                    
+                        
+                </div>
+                <div class="flex flex-col py-4 px-4 gap-3 boxcolor rounded-3xl">
+                    <div class="flex flex-row justify-between">
+                        <div class="flex flex-row gap-4">
+                            <img src="images/profile-3.jpg" alt="" class="w-12 rounded-full">
+                            <div class="flex flex-col">
+                                <b class="textcolor1 font-medium text-xl">Lara D'kosta</b>
+                                <h class="text-slate-400">Canada, 7 HOURS AGO</h>
+                            </div>
+                        </div> 
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6" id="ellipsis-h"><path fill="var(--textcolor1)" d="M12,10a2,2,0,1,0,2,2A2,2,0,0,0,12,10ZM5,10a2,2,0,1,0,2,2A2,2,0,0,0,5,10Zm14,0a2,2,0,1,0,2,2A2,2,0,0,0,19,10Z"></path></svg>
+                    </div>
+                    <div>
+                        <img src="images/feed-7.jpg" alt="" class="w-full rounded-3xl">
+                    </div>
+                    <div class="flex mx-3 flex-row justify-between ">
+                        <div class="flex flex-row gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6" id="heart"><path fill="var(--textcolor1)" d="M20.16,5A6.29,6.29,0,0,0,12,4.36a6.27,6.27,0,0,0-8.16,9.48l6.21,6.22a2.78,2.78,0,0,0,3.9,0l6.21-6.22A6.27,6.27,0,0,0,20.16,5Zm-1.41,7.46-6.21,6.21a.76.76,0,0,1-1.08,0L5.25,12.43a4.29,4.29,0,0,1,0-6,4.27,4.27,0,0,1,6,0,1,1,0,0,0,1.42,0,4.27,4.27,0,0,1,6,0A4.29,4.29,0,0,1,18.75,12.43Z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6" id="comment-dots"><path fill="var(--textcolor1)" d="M8,11a1,1,0,1,0,1,1A1,1,0,0,0,8,11Zm4,0a1,1,0,1,0,1,1A1,1,0,0,0,12,11Zm4,0a1,1,0,1,0,1,1A1,1,0,0,0,16,11ZM12,2A10,10,0,0,0,2,12a9.89,9.89,0,0,0,2.26,6.33l-2,2a1,1,0,0,0-.21,1.09A1,1,0,0,0,3,22h9A10,10,0,0,0,12,2Zm0,18H5.41l.93-.93a1,1,0,0,0,.3-.71,1,1,0,0,0-.3-.7A8,8,0,1,1,12,20Z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6" id="share-alt"><path fill="var(--textcolor1)" d="M18,14a4,4,0,0,0-3.08,1.48l-5.1-2.35a3.64,3.64,0,0,0,0-2.26l5.1-2.35A4,4,0,1,0,14,6a4.17,4.17,0,0,0,.07.71L8.79,9.14a4,4,0,1,0,0,5.72l5.28,2.43A4.17,4.17,0,0,0,14,18a4,4,0,1,0,4-4ZM18,4a2,2,0,1,1-2,2A2,2,0,0,1,18,4ZM6,14a2,2,0,1,1,2-2A2,2,0,0,1,6,14Zm12,6a2,2,0,1,1,2-2A2,2,0,0,1,18,20Z"></path></svg>
+                        </div>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6" id="bookmark"><path fill="var(--textcolor1)" d="M16,2H8A3,3,0,0,0,5,5V21a1,1,0,0,0,.5.87,1,1,0,0,0,1,0L12,18.69l5.5,3.18A1,1,0,0,0,18,22a1,1,0,0,0,.5-.13A1,1,0,0,0,19,21V5A3,3,0,0,0,16,2Zm1,17.27-4.5-2.6a1,1,0,0,0-1,0L7,19.27V5A1,1,0,0,1,8,4h8a1,1,0,0,1,1,1Z"></path></svg>
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <div class=" flex flex-row">
+                            <img src="images/profile-9.jpg" alt="" class="  rounded-full w-6 border-2 border-white" >
+                            <img src="images/profile-18.jpg" alt="" class=" rounded-full  w-6 -ml-2 border-2 border-white" >
+                            <img src="images/profile-19.jpg" alt="" class="  rounded-full w-6 -ml-3 border-2 border-white" >
+                            <h1 class="textcolor1">Liked by <b>Alexandra</b> and <b>1,809 others</b></h1>
+                        </div>
+                        <h class="textcolor1"><b>Lara D'kosta</b> Posing Professional #worklife</h>
+                        <h class="text-slate-400">View all 150 comments</h>
+                    </div>                        
+                </div>
+            </div> 
+
+            <!--------------------------------------------------right part------------------------------------------->
+            <div class="hidden lg:flex flex-col w-60 lg-2:w-80 h-max gap-5 mx-4 sticky -top-72">
+                <div class="Messages flex flex-col boxcolor w-full h-max p-4 gap-2 rounded-2xl">
+                    <div class="flex flex-row justify-between">
+                        <h1 class="text-xl font-medium textcolor1">Messages</h1>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7" viewBox="0 0 24 24" id="edit"><path fill="var(--textcolor2)" d="M21,12a1,1,0,0,0-1,1v6a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V5A1,1,0,0,1,5,4h6a1,1,0,0,0,0-2H5A3,3,0,0,0,2,5V19a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V13A1,1,0,0,0,21,12ZM6,12.76V17a1,1,0,0,0,1,1h4.24a1,1,0,0,0,.71-.29l6.92-6.93h0L21.71,8a1,1,0,0,0,0-1.42L17.47,2.29a1,1,0,0,0-1.42,0L13.23,5.12h0L6.29,12.05A1,1,0,0,0,6,12.76ZM16.76,4.41l2.83,2.83L18.17,8.66,15.34,5.83ZM8,13.17l5.93-5.93,2.83,2.83L10.83,16H8Z"></path></svg>
+                    </div>
+                    <input type="search" placeholder="Search Messages" class="Message-search textcolor1 text-lg font-thin rounded-full py-2 px-4 basecolor">
+                    <div class="flex flex-row justify-between py-2 px-2 text-lg font-semibold border-b-4" style="border-color: var(--basecolor);" >
+                        <button class="text-sm lg-2:text-lg textcolor1">Primary</button>
+                        <button class="text-sm lg-2:text-lg textcolor1">General</button>
+                        <button class="text-sm lg-2:text-lg" style="color:var(--buttoncolor)">Requests(7)</button>
+                    </div> 
+                    <!--------------------------------------------messages------------------------------->
+                    <div class="flex flex-col gap-3">
+                        <div class="Message flex flex-row gap-3">
+                            <div class="p-1">
+                                <img src="images/profile-2.jpg" alt="" class="w-12 rounded-full">
+                            </div>
+                            <div class="flex flex-col">
+                                <h class="textcolor1 text-lg font-semibold">Ederm Quist</h>
+                                <h class="text-slate-400">Just woke up bro</h>
+                            </div>
+                        </div> 
+                        <div class="Message flex flex-row gap-3">
+                            <div class="relative p-1">
+                                <img src="images/profile-3.jpg" class="w-12 z-0 rounded-full">
+                                <div class="absolute bottom-2 right-1 bg-green-400 w-3 h-3 rounded-full border-2 border-white"></div>
+                            </div>
+                            <div class="flex flex-col">
+                                <h class="textcolor1 text-lg font-semibold">Lara D'kosta</h>
+                                <h class="textcolor1 font-medium">Received Bro.. Thanks!</h>
+                            </div>
+                        </div> 
+                        <div class="Message flex flex-row gap-3">
+                            <div class="p-1">
+                                <img src="images/profile-4.jpg" alt="" class="w-12 rounded-full">
+                            </div>
+                            <div class="flex flex-col">
+                                <h class="textcolor1 text-lg font-semibold">Jane Doe</h>
+                                <h class="textcolor1 font-medium">Ok</h>
+                            </div>
+                        </div> 
+                        <div class="Message flex flex-row gap-3">
+                            <div class="p-1">
+                                <img src="images/profile-5.jpg" alt="" class="w-12 rounded-full">
+                            </div>
+                            <div class="flex flex-col">
+                                <h class="textcolor1 text-lg font-semibold">Daniella Jackson</h>
+                                <h class="textcolor1 font-medium">2 New Messages</h>
+                            </div>
+                        </div> 
+                        <div class="Message flex flex-row gap-3">
+                            <div class="p-1 relative">
+                                <img src="images/profile-8.jpg" alt="" class="w-12 rounded-full">
+                                <div class="absolute bottom-2 right-1 bg-green-400 w-3 h-3 rounded-full border-2 border-white"></div>
+                            </div>
+                            <div class="flex flex-col">
+                                <h class="textcolor1 text-lg font-semibold">Chris</h>
+                                <h class="text-slate-400">Netflix and chill??</h>
+                            </div>
+                        </div> 
+                        <div class="Message flex flex-row gap-3">
+                            <div class="p-1 relative">
+                                <img src="images/profile-6.jpg" alt="" class="w-12 rounded-full">
+                                <div class="absolute bottom-2 right-1 bg-green-400 w-3 h-3 rounded-full border-2 border-white"></div>
+                            </div>
+                            <div class="flex flex-col">
+                                <h class="textcolor1 text-lg font-semibold">Julliet Makarey</h>
+                                <h class="textcolor1 font-medium">Birthday Tomorrow!!</h>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                <!----------------------------------------------- Requestes ------------------------------->
+                <div class="flex flex-col gap-3">
+                    <div class="text-xl ml-3 font-semibold textcolor1">Requests</div>
+                
+                    <div class="flex flex-col gap-3 boxcolor rounded-3xl p-4">
+                        <div class="flex flex-row gap-2">
+                            <div class="p-1"><img src="images/profile-7.jpg" class="w-12 rounded-full" alt=""></div>
+                            <div class="flex flex-col">
+                                <h class="textcolor1 text-lg font-semibold">Chris Paul</h>
+                                <h class="text-slate-400">8 Mutual Friends</h>
+                            </div>
+                        </div>
+                        <div class="flex flex-row gap-4">
+                            <button class=" btn">Accept</button>
+                            <button class="bg-purple-200 text-black btn hover:border-white">Reject</button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-3 boxcolor rounded-3xl p-4">
+                        <div class="flex flex-row gap-2">
+                            <div class="p-1"><img src="images/profile-9.jpg" class="w-12 rounded-full" alt=""></div>
+                            <div class="flex flex-col">
+                                <h class="textcolor1 text-lg font-semibold">Smith</h>
+                                <h class="text-slate-400">15 Mutual Friends</h>
+                            </div>
+                        </div>
+                        <div class="flex flex-row gap-4">
+                            <button class="btn">Accept</button>
+                            <button class="bg-purple-200 text-black btn hover:border-white">Reject</button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-3 boxcolor rounded-3xl p-4">
+                        <div class="flex flex-row gap-2">
+                            <div class="p-1"><img src="images/profile-19.jpg" class="w-12 rounded-full" alt=""></div>
+                            <div class="flex flex-col">
+                                <h class="textcolor1 text-lg font-semibold">Farhan Akhtar</h>
+                                <h class="text-slate-400">7 Mutual Friends</h>
+                            </div>
+                        </div>
+                        <div class="flex flex-row gap-4">
+                            <button class="btn">Accept</button>
+                            <button class="bg-purple-200 text-black btn hover:border-white">Reject</button>
+                        </div>
+                    </div>  
+                </div>                      
+            </div>
+
+            <!--theme customization-->
+            
+            <div id="Theme" class="customize-theme collapse fixed top-0 left-0 z-40  w-screen h-screen bg-purple-50/40">
+                <div class="absolute bottom-48 left-120 flex flex-col justify-around items-center mx-5 w-168 h-96 p-4 boxcolor border-4 rounded-2xl">
+                    <div class="flex-col text-center">
+                        <h1 class="text-2xl font-bold textcolor1">Customize Your View</h1>
+                        <h1 class="text-lg text-slate-700">Manage your color and background.</h1>
+                    </div>
+                    <!-------------------------color------------------->
+                    <div class="w-full text-center">
+                        <h1 class="textcolor1 text-lg font-medium">Color</h1>
+                        <div class="flex flex-row justify-between p-4 w-full basecolor rounded-full">
+                            <div id="Colorpalette" class="rounded-full w-6 h-6 bg-purple-600"></div>
+                            <div id="Colorpalette" class= "rounded-full w-6 h-6 bg-yellow-600"></div>
+                            <div id="Colorpalette" class="rounded-full w-6 h-6 bg-red-600"></div>
+                            <div id="Colorpalette" class="rounded-full w-6 h-6 bg-green-600"></div>
+                            <div id="Colorpalette" class="rounded-full w-6 h-6 bg-blue-600"></div>
+                        </div>
+                    </div>
+                    <!-------------------------background ------------------->
+                    <div  class="w-full text-center">
+                        <h1 class="text-lg font-medium">Background</h1>
+                        <div  class="flex flex-row justify-around p-1 w-full">
+                            <button class="light btn rounded-xl bg-purple-200 text-black">
+                               <div class="flex gap-2">
+                                <div class="rounded-full m-1 w-5 h-5 bg-white border-4 border-purple-200"></div>
+                                <h>Light</h>
+                               </div>
+                            </button> 
+                            <button class="dim btn rounded-xl gap-2" style="background-color: #342d53">
+                                <div class="flex gap-2">
+                                    <div class="rounded-full m-1 w-5 h-5 border-4 border-purple-200 bg-slate-800"></div>
+                                    <div>Dim</div>
+                                </div>
+                            </button> 
+                            <button class="dark btn rounded-xl w-36" style="background-color: #212121">
+                                <div class="flex gap-2">
+                                    <div class="rounded-full m-1 w-5 h-5 border-4 border-purple-200 bg-black"></div>
+                                    <div>Lights Out</div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
